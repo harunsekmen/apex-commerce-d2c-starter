@@ -20,7 +20,7 @@ Developed and maintained by **[Harun Sekmen](https://github.com/harunsekmen)**.
 > - **Sub-Second Performance**: Guaranteed 90+ Core Web Vitals score on both mobile and desktop.
 > - **Zero Recurring App Fees**: Say goodbye to Shopify's $300+/month app subscriptions.
 > 
-> 📩 **Start Your Project**: [Hire Harun on Upwork](https://www.upwork.com/freelancers/~01a7a8b58043e6e6d9) | Direct Email: `sekhar38@gmail.com`
+> 📩 **Start Your Project**: [Hire Harun on Upwork](https://www.upwork.com/freelancers/~01a7a8b58043e6e6d9) | Direct Email: `sekmenwp@gmail.com`
 
 ---
 
