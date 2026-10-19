@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LUMEN BOTANICS — Modern Luxury Botanical Skincare (ApexCommerce Demo)</title>
+  <link rel="stylesheet" href="../assets/css/apex-commerce.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      color: #18181b;
+    }
+    .announcement-bar {
+      background: #18181b;
+      color: #ffffff;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .main-nav {
+      background: #ffffff;
+      border-bottom: 1px solid #f4f4f5;
+      padding: 20px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #09090b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge-d2c {
+      font-size: 10px;
+      background: #10b981;
+      color: #ffffff;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #52525b;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .bag-btn {
+      background: #18181b;
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-product-section {
+      max-width: 1200px;
+      margin: 48px auto;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .product-gallery {
+      background: #f4f4f5;
+      border-radius: 16px;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: 1px solid #e4e4e7;
+    }
+    .product-art {
+      font-size: 96px;
+    }
+    .product-details h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin: 0 0 12px 0;
+      color: #09090b;
+      line-height: 1.2;
+    }
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #71717a;
+      margin-bottom: 20px;
+    }
+    .price-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .current-price {
+      font-size: 28px;
+      font-weight: 700;
+      color: #09090b;
+    }
+    .compare-price {
+      font-size: 18px;
+      color: #a1a1aa;
+      text-decoration: line-through;
+    }
+    .product-desc {
+      font-size: 15px;
+      color: #52525b;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .main-atc-btn {
+      background: #18181b;
+      color: #ffffff;
+      border: none;
+      padding: 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s;
+    }
+    .main-atc-btn:hover {
+      background: #27272a;
+    }
+    .trust-badges {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid #f4f4f5;
+      font-size: 12px;
+      color: #52525b;
+      text-align: center;
+    }
+    .trust-badge-item strong {
+      display: block;
+      color: #18181b;
+      margin-bottom: 2px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    window.apexConfig = {
+      ajaxUrl: '/wp-admin/admin-ajax.php',
+      cartNonce: 'apex_demo_nonce'
+    };
+  </script>
+  <script src="../assets/js/apex-commerce.js"></script>
+</head>
+<body>
+  <div class="announcement-bar">
+    ✨ SPRING EXCLUSIVE: FREE COMPLIMENTARY TRAVEL ELIXIR ON ALL ORDERS OVER $75
+  </div>
+
+  <nav class="main-nav">
+    <div class="logo">
+      <span>LUMEN BOTANICS</span>
+      <span class="badge-d2c">D2C SPEED ENGINE</span>
+    </div>
+    <div class="nav-menu">
+      <span>Serum Collection</span>
+      <span>Daily Rituals</span>
+      <span>Clinical Results</span>
+      <span>Our Philosophy</span>
+    </div>
+    <div class="nav-actions">
+      <button type="button" class="bag-btn apex-cart-trigger">
+        <span>Shopping Bag</span>
+        <span class="apex-cart-count-badge" style="background: #ffffff; color: #18181b; border-radius: 999px; padding: 2px 7px; font-size: 11px; font-weight: 800;">1</span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="hero-product-section">
+    <div class="product-gallery">
+      <div class="product-art">🧴</div>
+      <div style="position: absolute; top: 20px; left: 20px; background: #ffffff; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; border: 1px solid #e4e4e7;">
+        🌿 100% ORGANIC ACTIVE
+      </div>
+    </div>
+
+    <div class="product-details">
+      <h1>Cellular Radiance Bio-Lipid Infusion</h1>
+      <div class="product-rating">
+        <span>★★★★★</span>
+        <span><strong>4.9/5</strong> (482 Verified Customer Reviews)</span>
+      </div>
+
+      <div class="price-wrap">
+        <span class="current-price">$88.00</span>
+        <span class="compare-price">$110.00</span>
+        <span style="font-size: 12px; background: #ecfdf5; color: #047857; font-weight: 700; padding: 4px 8px; border-radius: 4px;">Save 20% Today</span>
+      </div>
+
+      <p class="product-desc">
+        A clinical-grade, lightweight botanical lipid serum formulated with cold-pressed squalane and bioactive rosehip CO2 extract. Designed to restore barrier integrity within 72 hours.
+      </p>
+
+      <div class="cta-group">
+        <form class="cart" style="display: flex; flex-direction: column; width: 100%;">
+          <button type="button" class="main-atc-btn single_add_to_cart_button" id="demo-atc">
+            <span>Add to Bag — $88.00</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge-item">
+          <strong>⚡ Express Delivery</strong>
+          <span>Ships next business day</span>
+        </div>
+        <div class="trust-badge-item">
+          <strong>🛡️ 30-Day Guarantee</strong>
+          <span>100% refund guarantee</span>
+        </div>
+        <div class="trust-badge-item">
+          <strong>🌿 Dermatologist Tested</strong>
+          <span>Clean clinical active</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Slide-out Cart Drawer -->
+  <div id="apex-cart-drawer-overlay" class="apex-drawer-overlay"></div>
+  <aside id="apex-cart-drawer" class="apex-cart-drawer">
+    <div class="apex-drawer-header">
+      <h3>Your Shopping Bag (1)</h3>
+      <button type="button" class="apex-drawer-close">&times;</button>
+    </div>
+    
+    <div class="apex-drawer-shipping-progress">
+      <div class="apex-free-shipping-text">
+        <span>🎉 <strong>Free Express Shipping unlocked!</strong></span>
+      </div>
+      <div class="apex-progress-bar"><div class="apex-progress-fill" style="width: 100%;"></div></div>
+    </div>
+
+    <div class="apex-drawer-body">
+      <div class="widget_shopping_cart_content">
+        <div style="display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid #f4f4f5; align-items: center;">
+          <div style="width: 60px; height: 60px; background: #f4f4f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+            🧴
+          </div>
+          <div style="flex: 1;">
+            <strong style="display: block; font-size: 14px; color: #09090b;">Cellular Radiance Bio-Lipid Infusion</strong>
+            <span style="font-size: 12px; color: #71717a;">50ml Full Size</span>
+            <div style="margin-top: 6px; font-weight: 700; font-size: 14px; color: #09090b;">$88.00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="apex-drawer-footer">
+      <div style="display: flex; justify-content: space-between; font-size: 16px; font-weight: 800; margin-bottom: 16px;">
+        <span>Subtotal:</span>
+        <span>$88.00</span>
+      </div>
+      <div class="apex-drawer-guarantees">
+        <span>🔒 256-Bit SSL</span>
+        <span>⚡ 30-Day Money Back</span>
+        <span>📦 Free Returns</span>
+      </div>
+      <a href="#" class="apex-checkout-button">
+        Proceed to Instant Checkout &rarr;
+      </a>
+    </div>
+  </aside>
+</body>
+</html>
+
