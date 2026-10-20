@@ -24,7 +24,7 @@ final class StickyBar {
         <div id="apex-sticky-atc-bar" class="apex-sticky-bar" aria-hidden="true">
             <div class="apex-sticky-container">
                 <div class="apex-sticky-product-info">
-                    <?php echo $product->get_image('thumbnail', ['class' => 'apex-sticky-thumb']); ?>
+                    <?php echo wp_kses_post($product->get_image('thumbnail', ['class' => 'apex-sticky-thumb'])); ?>
                     <div class="apex-sticky-meta">
                         <span class="apex-sticky-title"><?php echo esc_html($product->get_name()); ?></span>
                         <span class="apex-sticky-price"><?php echo wp_kses_post($product->get_price_html()); ?></span>
