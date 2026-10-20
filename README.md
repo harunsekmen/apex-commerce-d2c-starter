@@ -1,5 +1,7 @@
 # ⚡ ApexCommerce · Modern D2C WooCommerce Starter Kit
 
+[🇬🇧 English](README.md) · [🇹🇷 Türkçe](README.tr.md)
+
 [![WooCommerce HPOS Ready](https://img.shields.io/badge/WooCommerce-HPOS%20Ready-7f54b3.svg)](https://github.com/harunsekmen/apex-commerce-d2c-starter)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](https://github.com/harunsekmen/apex-commerce-d2c-starter/blob/main/LICENSE)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Community%20Project-success.svg)](https://github.com/harunsekmen/apex-commerce-d2c-starter)
